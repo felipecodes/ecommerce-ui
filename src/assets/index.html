@@ -1,0 +1,23 @@
+<html lang="<%= htmlWebpackPlugin.options.locale %>">
+  <head>
+    <meta charset="utf-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta property="og:type" content="<%= htmlWebpackPlugin.options.type %>" />
+    <meta property="og:site_name" content="<%= htmlWebpackPlugin.options.siteName %>" />
+    <meta property="og:locale" content="<%= htmlWebpackPlugin.options.locale %>" />
+    <meta name="robots" content="<%= htmlWebpackPlugin.options.robots %>" />
+
+    <script>
+      <%= htmlWebpackPlugin.options.newrelic %>
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

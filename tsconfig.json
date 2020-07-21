@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "strict": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "Node",
+    "noEmit": true,
+    "baseUrl": "./src",
+    "jsx": "preserve",
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src/app/**/*",
+    "test/**/*"
+  ],
+  "exclude": [
+    "src/app/@types",
+    "config"
+  ]
+}
