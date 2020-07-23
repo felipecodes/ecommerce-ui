@@ -1,11 +1,10 @@
 module.exports = {
-  root: true,
   ignorePatterns: [
     'src/assets',
     'coverage',
     'dist',
     'config',
-    '*.config.js',
+    '*.js',
     'src/app/@types'
   ],
   extends: [
@@ -26,10 +25,7 @@ module.exports = {
         root: [
           './src'
         ],
-        extensions: [
-          '.ts',
-          '.tsx'
-        ]
+        extensions: ['.ts', '.tsx']
       }
     }
   },
@@ -45,13 +41,13 @@ module.exports = {
   },
   rules: {
     'import/extensions': [
-      'error',
-      'never'
+      "error",
+      "never",
     ],
-    'react/jsx-props-no-spreading': 0,
-    'react/prop-types': 0,
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': 0,
-    'import/prefer-default-export': 0
+    'import/prefer-default-export': 0,
+    'react/jsx-props-no-spreading': 0,
+    'react/prop-types': 0
   }
 }

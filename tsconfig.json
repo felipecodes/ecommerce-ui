@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["react", "node", "jest"],
     "module": "ESNext",
     "target": "ESNext",
     "strict": true,
@@ -12,12 +13,6 @@
     "jsx": "preserve",
     "resolveJsonModule": true
   },
-  "include": [
-    "src/app/**/*",
-    "test/**/*"
-  ],
-  "exclude": [
-    "src/app/@types",
-    "config"
-  ]
+  "include": ["src/@types", "src/app/**/*", "test/**/*"],
+  "exclude": ["config", "*.js"]
 }

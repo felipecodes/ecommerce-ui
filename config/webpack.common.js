@@ -41,7 +41,7 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.DefinePlugin(environment),
+    new webpack.EnvironmentPlugin(environment),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../src/assets/index.html'),
       // custom options
@@ -66,6 +66,10 @@ module.exports = {
       }, {
         from: 'src/assets/images',
         to: 'images',
+        flatten: true
+      }, {
+        from: 'src/assets/fonts',
+        to: 'fonts',
         flatten: true
       }]
     })

@@ -13,8 +13,8 @@ module.exports = {
   GTM_PREVIEW_ID: env.get('GTM_PREVIEW_ID').required(!isTesting).asString(),
 
   // SEO
-  ROBOTS_VALUE: env.get('ROBOTS_VALUE').required(!isTesting).asString(),
+  ROBOTS_VALUE: env.get('ROBOTS_VALUE').required(!isTesting).asEnum(['noindex, nofollow', 'index, follow']),
 
   // Build Only
-  DEVTOOL: env.get('DEVTOOL').required(!isTesting).asEnum(['source-map'])
+  DEVTOOL: env.get('DEVTOOL').required(!isTesting).asEnum(['source-map', 'none'])
 };

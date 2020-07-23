@@ -1,0 +1,128 @@
+{
+  "items": [
+    {
+      "id": "49",
+      "uuid": "e02967c2-056c-4016-a58a-faca7857c05f",
+      "type": "UNIQUE",
+      "name": "Energético Fusion 250ml",
+      "description": "Estilo: \nCor: Caramelo\nTeor: 0\nTemperatura: 13°C e 15°C\nSabor:",
+      "beverage_type": "NAB",
+      "slug": "energetico-fusion-250ml",
+      "image": "https://cdn.shopify.com/s/files/1/0010/3150/3987/products/Enrrgetico_fusion_250ml_Lata.png?v=1565713637",
+      "tags": "energy, energy drink, energético, teste-a, teste-b, teste-c, teste-o",
+      "search_tags": "energy, energy drink, energético, teste-a, teste-b, teste-c, teste-o",
+      "hl": 0.00269,
+      "status": "ACTIVE",
+      "vendors": [
+        {
+          "vendor": {
+            "id": "18",
+            "uuid": "b6cc6822-e3ab-4867-ba28-04c0c47a0491",
+            "name": "Fusion",
+            "slug": "Fusion",
+            "status": "ACTIVE"
+          }
+        }
+      ],
+      "category": {
+        "id": "7",
+        "uuid": "7b6c9296-7f79-41fc-8105-9c1526147536",
+        "name": "Energéticos",
+        "slug": "energeticos",
+        "status": "ACTIVE"
+      },
+      "packs": [
+        {
+          "id": "145",
+          "uuid": "aa0d0dc8-88c7-4917-920a-174e3d07701e",
+          "original_price": 24,
+          "current_price": 15.96,
+          "status": "ACTIVE",
+          "items": [],
+          "unities": 6
+        },
+        {
+          "id": "146",
+          "uuid": "e615ebca-56e2-45d5-b6c8-4cf41371850d",
+          "original_price": 48,
+          "current_price": 31.92,
+          "status": "ACTIVE",
+          "items": [],
+          "unities": 12
+        },
+        {
+          "id": "147",
+          "uuid": "7d0f2155-74d2-4188-bcb1-10401c882c6f",
+          "original_price": 96,
+          "current_price": 63.84,
+          "status": "ACTIVE",
+          "items": [],
+          "unities": 24
+        }
+      ],
+      "stock": "IN_STOCK"
+    },
+    {
+      "id": "50",
+      "uuid": "9e2f3e19-2762-4da7-b53b-beb637173f01",
+      "type": "UNIQUE",
+      "name": "Isotônico Gatorade Active Limão 500 ml Garrafa Pet",
+      "description": "Estilo: \nCor: Laranja\nTeor: 0\nTemperatura: 13°C e 15°C\nSabor: Laranja",
+      "beverage_type": "NAB",
+      "slug": "isotonico-gatorade-active-laranja-500-ml-garrafa-pet",
+      "image": "https://cdn.shopify.com/s/files/1/0010/3150/3987/products/Isotonico_Gatorade_Active_Limao_500ml_Garrafa_Pet_2x_b766d7c1-c54c-468e-9c29-f07cfa37fffc.png?v=1567666254",
+      "tags": "isotonico, laranja, teste-a, teste-b, teste-c, teste-o",
+      "search_tags": "isotonico, laranja, teste-a, teste-b, teste-c, teste-o",
+      "hl": 0.00269,
+      "status": "ACTIVE",
+      "vendors": [
+        {
+          "vendor": {
+            "id": "19",
+            "uuid": "64a794ab-1567-448e-ad22-add21795abd8",
+            "name": "Gatorade",
+            "slug": "Gatorade",
+            "status": "ACTIVE"
+          }
+        }
+      ],
+      "category": {
+        "id": "6",
+        "uuid": "445b2b9d-d7b9-4658-8e05-94ae1735df9c",
+        "name": "Isotônicos",
+        "slug": "isotonicos",
+        "status": "ACTIVE"
+      },
+      "packs": [
+        {
+          "id": "148",
+          "uuid": "31d8b5b3-02c7-4d18-9d6a-261e018e489e",
+          "original_price": 24.54,
+          "current_price": 17.94,
+          "status": "ACTIVE",
+          "items": [],
+          "unities": 6
+        },
+        {
+          "id": "149",
+          "uuid": "a1d84808-eb76-4261-a9f0-452d25be3f6e",
+          "original_price": 49.08,
+          "current_price": 35.88,
+          "status": "ACTIVE",
+          "items": [],
+          "unities": 12
+        },
+        {
+          "id": "150",
+          "uuid": "ea04ee70-67a7-47aa-a911-d97d91d8a1b1",
+          "original_price": 73.62,
+          "current_price": 53.82,
+          "status": "ACTIVE",
+          "items": [],
+          "unities": 18
+        }
+      ],
+      "stock": "IN_STOCK"
+    }
+  ]
+}

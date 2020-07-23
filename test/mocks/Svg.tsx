@@ -1,5 +1,5 @@
-import React from 'react'
+import React from 'react';
 
-const Svg = <div>SVG Mock</div>
+const Svg = <div>SVG Mock</div>;
 
 export default Svg;

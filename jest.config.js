@@ -6,13 +6,13 @@ module.exports = {
   testEnvironment: 'jsdom',
   testURL: 'http://localhost',
   moduleFileExtensions: ['js', 'jsx', 'json', 'ts', 'tsx'],
-  collectCoverageFrom: ['**/*.+(js|jsx|ts|tsx)'],
+  collectCoverageFrom: ['**/*.(ts|tsx)'],
   testMatch: [
     '**/*.spec.+(js|jsx|ts|tsx)',
     '**/*.spec.+(js|jsx|ts|tsx)'
   ],
   testPathIgnorePatterns: ignores,
-  coveragePathIgnorePatterns: ignores,
+  coveragePathIgnorePatterns: [...ignores, 'test'],
   transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'],
   coverageThreshold: {
     global: {
