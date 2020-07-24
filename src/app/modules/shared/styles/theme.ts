@@ -1,16 +1,16 @@
-const pxToRem = (n: number) => (
-  `${n / 16}rem`
-);
+import { DefaultTheme } from 'styled-components';
 
-const theme = {
+const pxToRem = (n: number): string => `${n / 16}rem`;
+
+const theme: DefaultTheme = {
   breakpoints: {
     values: {
       lg: 1280,
       md: 960,
       sm: 600,
       xl: 1920,
-      xs: 0
-    }
+      xs: 0,
+    },
   },
   spacing: {
     extraTight: pxToRem(4),
@@ -24,7 +24,7 @@ const theme = {
     borderRadius: 4,
   },
   shadows: [
-    '0 0.3px 3.1px rgba(0, 0, 0, 0.014), 0 0.7px 7.4px rgba(0, 0, 0, 0.02), 0 1.4px 14px rgba(0, 0, 0, 0.025), 0 2.5px 25px rgba(0, 0, 0, 0.03), 0 4.6px 46.8px rgba(0, 0, 0, 0.036), 0 11px 112px rgba(0, 0, 0, 0.05)'
+    '0 0.3px 3.1px rgba(0, 0, 0, 0.014), 0 0.7px 7.4px rgba(0, 0, 0, 0.02), 0 1.4px 14px rgba(0, 0, 0, 0.025), 0 2.5px 25px rgba(0, 0, 0, 0.03), 0 4.6px 46.8px rgba(0, 0, 0, 0.036), 0 11px 112px rgba(0, 0, 0, 0.05)',
   ],
   palette: {
     common: {
@@ -33,29 +33,30 @@ const theme = {
     },
     primary: {
       main: '#ffc600',
-      contrastText: '#000'
+      contrastText: '#000',
     },
     secondary: {
       main: '#1e345d',
-      contrastText: '#fff'
+      contrastText: '#fff',
     },
     text: {
       primary: '#000',
       secondary: '#808080',
     },
-    typography: {
-      subtitle: {},
-      body: {},
-    }
   },
-  zIndex: {}
+  zIndex: {},
+  mixins: { pxToRem },
 };
 
-export type Theme = typeof theme;
-export type ThemeSpacing = 'extraTight' | 'tight' | 'baseTight' | 'base' | 'loose' | 'extraLoose';
+type T = typeof theme;
 
-declare module "styled-components" {
-  export interface DefaultTheme extends Theme {}
-}
+export type Theme = typeof theme;
+export type ThemeSpacing =
+  | 'extraTight'
+  | 'tight'
+  | 'baseTight'
+  | 'base'
+  | 'loose'
+  | 'extraLoose';
 
 export default theme;

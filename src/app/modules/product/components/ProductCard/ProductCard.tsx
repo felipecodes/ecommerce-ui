@@ -3,12 +3,14 @@ import Button from 'app/modules/shared/components/Button';
 import Radio from 'app/modules/shared/components/Radio';
 import Typography from 'app/modules/shared/components/Typography/Typography';
 import Box from 'app/modules/shared/components/Box/Box';
+import { CartStateDTO } from 'app/modules/cart/dto/CartDTO';
 import { ProductStateDTO, PackState } from '../../dto/ProductDTO';
 import * as styles from './ProductCard.styles';
+import { mapToCartState } from '../../mappers/product.mapper';
 
 const ProductCard: React.FC<{
   product: ProductStateDTO;
-  addToCard(productId: string, packId: string): void;
+  addToCard(product: CartStateDTO): void;
   discountSelector(
     pack: PackState,
   ): {
@@ -30,7 +32,11 @@ const ProductCard: React.FC<{
   }, [selectedPack]);
 
   return (
-    <styles.Card as={Box} borderRadius data-testid="product-card">
+    <styles.Card
+      as={Box}
+      borderRadius
+      data-testid={`${product.uuid}-product-card`}
+    >
       <styles.Image src={product.image} alt={product.description} />
       <styles.Name as={Typography} component="h2" variant="h3">
         {product.name}
@@ -44,7 +50,7 @@ const ProductCard: React.FC<{
       </styles.PackTitle>
 
       <styles.Packs>
-        {product.packs.map((pack) => (
+        {product.packs.map((pack, index) => (
           <styles.Pack
             as={Radio}
             key={pack.id}
@@ -53,6 +59,7 @@ const ProductCard: React.FC<{
             label={`${pack.unities} unit.`}
             checked={pack.id === selectedPackId}
             onChange={(value) => setSelectedPackId(value)}
+            data-testid={`${product.uuid}-product-pack-${index}`}
           />
         ))}
       </styles.Packs>
@@ -80,9 +87,10 @@ const ProductCard: React.FC<{
       </styles.Price>
 
       <Button
+        data-testid={`${product.uuid}-add-to-cart-button`}
         type="button"
         onClick={() => {
-          addToCard(product.id, selectedPackId);
+          addToCard(mapToCartState(product, selectedPackId));
         }}
       >
         Adicionar ao carrinho

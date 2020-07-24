@@ -1,5 +1,5 @@
 import React from 'react';
 
-const Svg = <div>SVG Mock</div>;
+const Svg: React.FC = (props) => <div {...props}>SVG Mock</div>;
 
 export default Svg;

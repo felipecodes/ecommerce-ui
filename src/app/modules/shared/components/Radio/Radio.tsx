@@ -8,9 +8,11 @@ const Radio: React.FC<{
   label: string;
   checked: boolean;
   onChange(value: string): void;
-}> = ({ className, name, value, label, checked, onChange }) => (
+  'data-testId'?: string;
+}> = ({ className, name, value, label, checked, onChange, ...props }) => (
   <div>
     <styles.Input
+      {...props}
       type="radio"
       id={value}
       name={name}

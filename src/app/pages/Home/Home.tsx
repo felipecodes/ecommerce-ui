@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import Grid from 'app/modules/shared/components/Grid';
 import ProductCard from 'app/modules/product/components/ProductCard';
+import fetchProducts from 'app/modules/product/redux/operations/fetchProducts';
+import addToCart from 'app/modules/cart/redux/operations/addToCart';
 import {
   productSelectors,
   productPackDiscountSelector,
 } from 'app/modules/product/redux/product.slice';
-import fetchProducts from 'app/modules/product/redux/operations/fetchProducts';
-import Grid from 'app/modules/shared/components/Grid';
+import { CartStateDTO } from 'app/modules/cart/dto/CartDTO';
 
 const Home: React.FC = () => {
   const products = useSelector(productSelectors.selectAll);
@@ -25,7 +27,9 @@ const Home: React.FC = () => {
               <ProductCard
                 product={product}
                 discountSelector={productPackDiscountSelector}
-                addToCard={console.log}
+                addToCard={(cart: CartStateDTO): void => {
+                  dispatch(addToCart(cart));
+                }}
               />
             </Grid>
           ))}
