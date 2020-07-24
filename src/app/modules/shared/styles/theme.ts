@@ -1,15 +1,17 @@
 import { DefaultTheme } from 'styled-components';
 
+export type Breakpoint = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+
 const pxToRem = (n: number): string => `${n / 16}rem`;
 
 const theme: DefaultTheme = {
   breakpoints: {
     values: {
-      lg: 1280,
-      md: 960,
-      sm: 600,
-      xl: 1920,
-      xs: 0,
+      xs: 480,
+      sm: 768,
+      md: 992,
+      lg: 1200,
+      xl: 1400,
     },
   },
   spacing: {
@@ -26,6 +28,7 @@ const theme: DefaultTheme = {
   shadows: [
     '0 0.3px 3.1px rgba(0, 0, 0, 0.014), 0 0.7px 7.4px rgba(0, 0, 0, 0.02), 0 1.4px 14px rgba(0, 0, 0, 0.025), 0 2.5px 25px rgba(0, 0, 0, 0.03), 0 4.6px 46.8px rgba(0, 0, 0, 0.036), 0 11px 112px rgba(0, 0, 0, 0.05)',
   ],
+  transitions: ['transform 200ms cubic-bezier(0.55, 0, 0.1, 1)'],
   palette: {
     common: {
       white: '#fff',

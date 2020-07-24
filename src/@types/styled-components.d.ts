@@ -4,11 +4,11 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     breakpoints: {
       values: {
-        lg: 1280;
-        md: 960;
-        sm: 600;
-        xl: 1920;
-        xs: 0;
+        xs: 480;
+        sm: 768;
+        md: 992;
+        lg: 1200;
+        xl: 1400;
       };
     };
     spacing: {
@@ -23,6 +23,7 @@ declare module 'styled-components' {
       borderRadius: 4;
     };
     shadows: string[];
+    transitions: string[];
     palette: {
       common: {
         white: string;

@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
+import { Breakpoint } from 'app/modules/shared/styles/theme';
 
 type Column = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
-type Breakpoint = 'xs' | 'sm' | 'md' | 'lg';
 
 const container = css`
   display: flex;
@@ -24,6 +24,8 @@ const Grid = styled.div<{
   md?: Column;
   lg?: Column;
 }>`
+  width: 100%;
+
   ${(props) => props.container && container}
   ${(props) => props.xs && column('xs', props.xs)}
   ${(props) => props.sm && column('sm', props.sm)}
