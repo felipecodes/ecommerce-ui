@@ -1,12 +1,34 @@
 # UI Sempre em Casa
 
+## What was used on this project?
+
+This project's stack consists of basic Typescript/React/Javascript libraries and the usage of something that is a feature-based approach. Different layers were defined to make every boundry explicit (see src/app folder). So, we have:
+
+Layers:
+
+- `app/modules`: Feature-based approach for composing the application features
+  - `app/modules/example/components`: React components for the example feature
+  - `app/modules/example/dto`: [DTO pattern](https://khalilstemmler.com/articles/typescript-domain-driven-design/repository-dto-mapper/)-based approach for representing the data structures from API and Redux State
+  - `app/modules/example/redux`: Redux state management for example feature
+    - `app/modules/example/redux/operations`: use cases-based approach for application actions
+    - `app/modules/example/redux/example.slice.ts`: example feature reducer, and state selectors
+- `app/shared`: generic/shared code (components, styles, enums)
+- `app/pages`: page components
+
+Libs:
+
+- [React.js](https://reactjs.org/), and [styled-components](https://styled-components.com/)
+- [Redux](https://redux.js.org/), and [Redux Toolkit](https://redux-toolkit.js.org/)
+- [jest](https://jestjs.io/), and [@testing-library/react](https://testing-library.com/)
+
 ## Getting started
 
-You can view a live demo over at https://sec-15emmn9hy.vercel.app/
+You can view a live demo over at https://sec-beta.vercel.app/
 
 ### To get the frontend running locally:
 
 - Clone this repo
+- This project has an `.nvmrc` file, so you can use `nvm use` for use correctly node version. See more at [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
 - Run `npm install` to install all req'd dependencies
 - Run `npm run start:dev` to start the local server (this project uses my own build config)
 
@@ -17,14 +39,14 @@ For convenience, we have a live API server running at https://sec-mock-api.herok
 
 If you want to change the API URL to a local server, simply edit your `.env` and change API_URL to the local server's URL (i.e. `http://localhost:3000/api`)
 
-## To get the quality tools running locally:
+### To get the quality tools running locally:
 
-### TypeScript, ESlint, Prettier
+#### TypeScript, ESlint, Prettier
 
 - Run `npm run check-types` to check for typescript errors
 - Run `npm run lint` to check for ESLint errors
 
-### Application Tests
+#### Application Tests
 
 - Run `npm run test` to run/check application tests
 - Run `npm run test:watch` to run/check tests, and keep tests running
