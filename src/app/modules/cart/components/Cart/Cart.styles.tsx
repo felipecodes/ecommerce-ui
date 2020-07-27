@@ -44,15 +44,19 @@ export const transition = {
   overlayStyle: {
     entering: {
       opacity: 1,
+      pointerEvents: 'auto',
     },
     entered: {
       opacity: 1,
+      pointerEvents: 'auto',
     },
     exiting: {
       opacity: 0,
+      pointerEvents: 'none',
     },
     exited: {
       opacity: 0,
+      pointerEvents: 'none',
     },
   },
 
