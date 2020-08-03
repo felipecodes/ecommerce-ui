@@ -46,9 +46,9 @@ module.exports = {
       template: path.resolve(__dirname, '../src/assets/index.html'),
       // custom options
       newrelic,
-      title: 'Sempre em Casa',
+      title: 'Ecommerce UI',
       type: 'website',
-      siteName: 'Sempre em Casa',
+      siteName: 'Ecommerce UI',
       locale: 'pt-BR',
       robots: environment.ROBOTS_VALUE
     }),

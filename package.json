@@ -1,7 +1,7 @@
 {
-  "name": "sec",
+  "name": "ecommerce-ui",
   "version": "0.1.0",
-  "description": "Sempre em Casa",
+  "description": "Ecommerce UI",
   "homepage": "https://github.com/felipecodes/sec#readme",
   "bugs": "https://github.com/felipecodes/sec/issues",
   "engines": {

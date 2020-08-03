@@ -1,4 +1,4 @@
-# UI Sempre em Casa
+# Ecommerce UI
 
 ## What was used on this project?
 

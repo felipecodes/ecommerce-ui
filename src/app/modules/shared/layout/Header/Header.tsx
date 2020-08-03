@@ -9,7 +9,7 @@ const Header: React.FC = () => {
   return (
     <styles.Header>
       <Typography color="secondary" contrastText component="h1" variant="h1">
-        Sempre em Casa
+        Ecommerce UI
       </Typography>
 
       <styles.ShopCartIcon
